@@ -305,6 +305,7 @@
             HXPhotoSubViewCell *addCell = [collectionView dequeueReusableCellWithReuseIdentifier:@"addCell" forIndexPath:indexPath];
             addCell.index = indexPath.item;
             addCell.model = self.addModel;
+            addCell.imageEdgeInsets = self.addCellImageViewEdgeInsets;
             return addCell;
         }
     }
@@ -320,6 +321,7 @@
     cell.showDeleteNetworkPhotoAlert = self.showDeleteNetworkPhotoAlert;
     cell.deleteCellShowAlert = self.deleteCellShowAlert;
     cell.hideDeleteButton = self.hideDeleteButton;
+    cell.imageEdgeInsets = self.customCellImageViewEdgeInsets;
     return cell;
 }
  

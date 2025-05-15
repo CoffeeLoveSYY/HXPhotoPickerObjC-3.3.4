@@ -35,6 +35,8 @@ typedef NS_ENUM(NSUInteger, HXPhotoViewPreViewShowStyle) {
 @property (weak, nonatomic) id<HXPhotoViewDelegate> delegate;
 @property (strong, nonatomic) HXPhotoManager *manager;
 @property (strong, nonatomic) HXCollectionView *collectionView;
+@property (assign, nonatomic) UIEdgeInsets customCellImageViewEdgeInsets;
+@property (assign, nonatomic) UIEdgeInsets addCellImageViewEdgeInsets;
 
 #pragma mark - < Block >
 /// 照片/视频发生改变时调用 - 选择、移动顺序、删除

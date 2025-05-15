@@ -385,7 +385,13 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    self.imageView.frame = self.bounds;
+    
+    UIEdgeInsets insets = self.imageEdgeInsets;
+    CGFloat imageViewX = insets.left;
+    CGFloat imageViewY = insets.top;
+    CGFloat imageViewWidth = self.bounds.size.width - insets.left - insets.right;
+    CGFloat imageViewHeight = self.bounds.size.height - insets.top - insets.bottom;
+    self.imageView.frame = CGRectMake(imageViewX, imageViewY, imageViewWidth, imageViewHeight);
     
     self.stateLb.frame = CGRectMake(0, self.hx_h - 18, self.hx_w - 4, 18);
     self.bottomMaskView.frame = CGRectMake(0, self.hx_h - 25, self.hx_w, 25);
